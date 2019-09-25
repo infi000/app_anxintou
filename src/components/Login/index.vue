@@ -23,7 +23,7 @@ export default {
       this.$router.push({path:"/register"})
     },
     handleLogin(){
-      this.$router.push({path:"/main/loan"})
+      this.$router.push({path:"/main"})
     }
   }
 };
@@ -33,11 +33,5 @@ export default {
 .wrap-login {
   padding-top: 30%;
 }
-.wrap-button {
-  width: 80%;
-  margin: 50px auto;
-}
-.mt-button {
-  width: 100%;
-}
+
 </style>

@@ -4,6 +4,7 @@ import Login from "@/components/Login";
 import Register from "@/components/Register";
 import Main from "@/components/Main";
 import Loan from "@/components/Main/Loan";
+import Interest from "@/components/Interest";
 import Me from '@/components/Main/Me'
 
 Vue.use(Router)
@@ -21,21 +22,15 @@ export default new Router({
       component: Register
     },
     {
+      path: "/interest",
+      name: "interest",
+      component: Interest
+    },
+    {
       path: "/main",
       name: "main",
       component: Main,
-      children: [
-        {
-          path: "loan",
-          name: "loan",
-          component: Loan
-        },
-        {
-          path: "me",
-          name: "me",
-          component: Me
-        }
-      ]
+      children: []
     }
   ]
 });

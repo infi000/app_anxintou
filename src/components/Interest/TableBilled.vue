@@ -1,15 +1,10 @@
 <template>
-<div>
-  <Form></Form>
-</div>
+  <div>已经换饿了 的e</div>
 </template>
 
 <script>
-import Form from './Form';
 export default {
-components:{
-  Form
-}
+
 }
 </script>
 
