@@ -4,6 +4,7 @@
     <mt-field label="身份证" placeholder="请输入身份证" v-model="form.idcard"></mt-field>
     <mt-field label="手机号" placeholder="请输入手机号" v-model="form.phone"></mt-field>
     <mt-field label="银行卡号" placeholder="请输入银行卡号" type="number" v-model="form.bcard"></mt-field>
+    <mt-field label="借款金额" placeholder="请输入借款金额" type="number" v-model="form.money"></mt-field>
     <mt-field label="城市" placeholder="请输入城市" v-model="form.city"></mt-field>
     <mt-field label="借款期限" placeholder="1-12个月" type="numver" v-model="form.tlimit"></mt-field>
     <div class="select-wrap">
@@ -58,8 +59,8 @@
 
 <script>
 import { mapState } from "vuex";
-import { Toast } from 'mint-ui';
-
+import { Toast } from "mint-ui";
+import { addLoan } from "@/api";
 export default {
   data() {
     return {
@@ -75,11 +76,16 @@ export default {
   },
   methods: {
     handleSubmie() {
-      Toast({
-        message: "操作成功",
-        iconClass: "icon icon-success",
-         duration: 1000
-      });
+      const params = this.form;
+      params.uid="10000";
+      const sucf = () => {
+        Toast({
+          message: "操作成功",
+          iconClass: "icon icon-success",
+          duration: 1000
+        });
+      };
+      addLoan({ params, sucf });
     }
   }
 };

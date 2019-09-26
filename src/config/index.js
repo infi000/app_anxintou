@@ -11,6 +11,7 @@ const api = host + 'loanapi/i.php?';
 const params = {
   login: 103061,
   register: 103060,
+  addLoan: 103050,
 };
 
 export { params, host ,api};
