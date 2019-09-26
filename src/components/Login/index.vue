@@ -25,8 +25,11 @@ export default {
     },
     handleLogin(){
       const params=this.form;
-      login({params});
-      // this.$router.push({path:"/main"})
+      const sucf=(payload)=>{
+        this.$store.commit("setUserInfo",payload);
+        this.$router.push({path:"/main"})
+      }
+      login({params,sucf});
     }
   }
 };

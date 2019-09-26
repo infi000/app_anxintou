@@ -61,6 +61,7 @@
 import { mapState } from "vuex";
 import { Toast } from "mint-ui";
 import { addLoan } from "@/api";
+
 export default {
   data() {
     return {
@@ -77,7 +78,7 @@ export default {
   methods: {
     handleSubmie() {
       const params = this.form;
-      params.uid="10000";
+      params.uid=this.$store.state.userinfo.uid;
       const sucf = () => {
         Toast({
           message: "操作成功",

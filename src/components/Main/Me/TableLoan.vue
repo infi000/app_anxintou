@@ -22,10 +22,10 @@
         <div class="placeholder">{{item.money}}</div>
       </div>
       <div class="weui-flex__item">
-        <div class="placeholder">{{item.limit}}</div>
+        <div class="placeholder">{{item.tlimit}}</div>
       </div>
       <div class="weui-flex__item">
-        <div class="placeholder">{{item.state}}</div>
+        <div class="placeholder">{{item.status}}</div>
       </div>
     </div>
   </div>

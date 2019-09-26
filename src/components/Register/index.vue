@@ -12,7 +12,8 @@
 </template>
 
 <script>
-import {register} from "@/api"
+import {register} from "@/api";
+import { Toast } from 'mint-ui';
 export default {
   data() {
     return {
@@ -22,7 +23,14 @@ export default {
   methods:{
       handleRegister(){
       const params=this.form;
-      register({params});
+       const sucf=(payload)=>{
+        Toast({
+          message:"注册成功！",
+          duration:2000
+        })
+        this.$router.push({path:"/login"})
+      }
+      register({params,sucf});
     },
     handleToLogin(){
       this.$router.push({path:"/login"})

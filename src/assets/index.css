@@ -23,33 +23,35 @@
   margin: 30px auto;
 }
 .wrap-login .mint-cell-wrapper,
-.wrap-register .mint-cell-wrapper{
+.wrap-register .mint-cell-wrapper {
   font-size: 16px;
 }
-.mint-cell-wrapper{
+.mint-cell-wrapper {
   font-size: 14px;
 }
- .mt-button {
+.mt-button {
   width: 100%;
 }
-.table-wrap{
-  margin-top:20px;
-}
-.cell-data{
+
+.cell-data {
   font-size: 12px;
-    color: #545454;
-    background: #fff9ef;
+  color: #545454;
+  background: #fff9ef;
 }
 
-.cell-title{
-  font-size:13px;
-  background:#fff;
-  color:rgb(112, 112, 112)
+.cell-title {
+  font-size: 13px;
+  background: #fff;
+  color: rgb(112, 112, 112);
 }
-.table-wrap .weui-cell::before{
-left:0
+.table-wrap {
+  margin-top: 20px;
+  margin-bottom:40px;
+}
+.table-wrap .weui-cell::before {
+  left: 0;
 }
 
-.table-wrap .item-small{
-  width:40px
+.table-wrap .item-small {
+  width: 40px;
 }
