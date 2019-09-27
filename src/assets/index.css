@@ -18,20 +18,30 @@
   text-align: center;
 }
 
-.wrap-button {
-  width: 80%;
-  margin: 30px auto;
-}
 .wrap-login .mint-cell-wrapper,
 .wrap-register .mint-cell-wrapper {
   font-size: 16px;
 }
+
 .mint-cell-wrapper {
   font-size: 14px;
+}
+
+.wrap-button {
+  width: 80%;
+  margin: 30px auto;
+}
+.wrap-button .mt-button {
+  margin-top: 20px;
 }
 .mt-button {
   width: 100%;
 }
+
+.wrap-bind .mint-field{
+  border-bottom: 1px solid #ddd
+}
+
 
 .cell-data {
   font-size: 12px;
@@ -46,7 +56,7 @@
 }
 .table-wrap {
   margin-top: 20px;
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
 .table-wrap .weui-cell::before {
   left: 0;

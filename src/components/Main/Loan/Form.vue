@@ -53,6 +53,8 @@
     </div>
     <div class="wrap-button">
       <mt-button type="primary" class="mt-button" size="small" @click="handleSubmie">提交</mt-button>
+      <div style="height:20px;"></div>
+      <mt-button type="danger" class="mt-button" size="small" @click="handleBind">绑定手机</mt-button>
     </div>
   </div>
 </template>
@@ -78,7 +80,7 @@ export default {
   methods: {
     handleSubmie() {
       const params = this.form;
-      params.uid=this.$store.state.userinfo.uid;
+      params.uid=this.$store.state.userinfo.uid||"";
       const sucf = () => {
         Toast({
           message: "操作成功",
@@ -87,6 +89,9 @@ export default {
         });
       };
       addLoan({ params, sucf });
+    },
+    handleBind(){
+      this.$router.push({path:"/bind"})
     }
   }
 };

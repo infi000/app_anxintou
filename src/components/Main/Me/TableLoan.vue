@@ -14,7 +14,7 @@
         <div class="placeholder">状态</div>
       </div>
     </div>
-     <div class="weui-flex weui-cell text-center cell-data" v-for="item in data" :key="item.id" @click="handlePageTo">
+     <div class="weui-flex weui-cell text-center cell-data" v-for="item in data" :key="item.bid" @click="handlePageTo(item.bid)">
       <div class="weui-flex__item">
         <div class="placeholder">{{item.date}}</div>
       </div>
@@ -37,7 +37,8 @@ export default {
     data:Array
   },
   methods:{
-    handlePageTo(){
+    handlePageTo(bid){
+      this.$store.commit("interest/updateBid",bid);
       this.$router.push({path:"interest"})
     }
   }

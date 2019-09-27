@@ -36,37 +36,44 @@ export default {
     TableLoan
   },
   methods: {
-    getLoanList() {
-      const sucf = d => {
-        this.data1=d.list
-      };
-      getLoanList({ sucf });
+    getLoanList(str) {
+      const that = this;
+      const strObj = {
+        "申请":{params:{type:1},sucf(d){that.data1=d.list}},
+        "还款":{params:{type:2},sucf(d){that.data2=d.list}},
+        "完成":{params:{type:3},sucf(d){that.data3=d.list}},
+      }
+      const params = strObj[str].params;
+      const sucf = strObj[str].sucf;
+      getLoanList({ params, sucf });
     }
   },
   watch: {
-    selected(d) {
-      switch (d) {
-        case "申请":
-          this.getLoanList();
-          break;
-        case "还款":
-          console.log("还款");
-          break;
-        case "完成":
-          console.log("完成");
-          break;
-      }
+    selected(str) {
+      this.getLoanList(str);
+      // switch (opt) {
+      //   case "申请":
+      //     this.getLoanList("申请");
+      //     break;
+      //   case "还款":
+      //      this.getLoanList("还款");
+      //     break;
+      //   case "完成":
+      //      this.getLoanList("完成");
+      //     break;
+      // }
     }
   },
   created() {
-    this.getLoanList();
+    const str = this.selected;
+    this.getLoanList(str);
   }
 };
 </script>
 
 <style scoped>
 .wrap-me {
-overflow-y: auto;
--webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 </style>

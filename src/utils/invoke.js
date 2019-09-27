@@ -41,10 +41,6 @@ var invoke = function(params, sucf, errf, config) {
   axios
     .post(_url, _params, _config)
     .then(function(result) {
-       Toast({
-         message: "掉成功",
-         duration: 3000
-       });
       var data = result.data;
       if (data.status == 1) {
         _sucf(data.data);

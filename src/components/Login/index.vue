@@ -26,7 +26,7 @@ export default {
     handleLogin(){
       const params=this.form;
       const sucf=(payload)=>{
-        this.$store.commit("setUserInfo",payload);
+        this.$store.commit("updateUserInfo",payload);
         this.$router.push({path:"/main"})
       }
       login({params,sucf});
