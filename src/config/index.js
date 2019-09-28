@@ -14,6 +14,9 @@ const params = {
   addLoan: 103050,
   getLoanList: 101030,
   getSXList: 101013,
+  bindCard: 103080,
+  bindCardQr: 103081,
+  bindCardRepeat: 103082,
 };
 
 export { params, host ,api};

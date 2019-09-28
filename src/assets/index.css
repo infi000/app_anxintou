@@ -32,14 +32,14 @@
   margin: 30px auto;
 }
 .wrap-button .mt-button {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .mt-button {
   width: 100%;
 }
 
 .wrap-bind .mint-field{
-  border-bottom: 1px solid #ddd
+  /* border-bottom: 1px solid #ddd */
 }
 
 

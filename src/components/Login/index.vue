@@ -1,6 +1,6 @@
 <template>
   <div class="wrap-login">
-    <mt-field label="手机号" placeholder="请输入手机号" type="tel" v-model="form.phone"></mt-field>
+    <mt-field label="手机号" placeholder="请输入手机号" type="text" v-model="form.phone"></mt-field>
     <mt-field label="密码" placeholder="请输入密码" type="password" v-model="form.pass"></mt-field>
     <div class="wrap-button">
       <mt-button type="primary" class="mt-button" @click="handleLogin">登陆</mt-button>

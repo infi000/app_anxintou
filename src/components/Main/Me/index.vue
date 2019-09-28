@@ -51,17 +51,6 @@ export default {
   watch: {
     selected(str) {
       this.getLoanList(str);
-      // switch (opt) {
-      //   case "申请":
-      //     this.getLoanList("申请");
-      //     break;
-      //   case "还款":
-      //      this.getLoanList("还款");
-      //     break;
-      //   case "完成":
-      //      this.getLoanList("完成");
-      //     break;
-      // }
     }
   },
   created() {

@@ -2,6 +2,7 @@ import Vuex from "vuex";
 import Vue from "vue";
 import loan from "./loan";
 import interest from "./interest";
+import bind from "./bind";
 Vue.use(Vuex);
 const state = {
   userInfo: { phone: "", uid: "" },
@@ -20,7 +21,8 @@ const store = {
   getters,
   modules: {
     loan,
-    interest
+    interest,
+    bind
   }
 };
 
