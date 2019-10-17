@@ -7,7 +7,7 @@
     </mt-navbar>
     <mt-tab-container v-model="selected">
       <mt-tab-container-item id="申请">
-        <TableLoan :data="data1"></TableLoan>
+        <TableLoan :data="data1" @confirmDone="getLoanList('申请')"></TableLoan>
       </mt-tab-container-item>
       <mt-tab-container-item id="还款">
         <TableLoan :data="data2"></TableLoan>
@@ -46,7 +46,7 @@ export default {
       const params = strObj[str].params;
       const sucf = strObj[str].sucf;
       getLoanList({ params, sucf });
-    }
+    },
   },
   watch: {
     selected(str) {

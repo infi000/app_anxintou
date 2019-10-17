@@ -14,6 +14,10 @@ const addLoan = ({ params = {}, sucf = "", errf = "" } = {}) => {
   params.m = PARAMS.addLoan;
   invoke(params, sucf, errf);
 };
+const confirmLoan = ({ params = {}, sucf = "", errf = "" } = {}) => {
+  params.m = PARAMS.confirmLoan;
+  invoke(params, sucf, errf);
+};
 //查询用户借款信息 type=1申请 2还款 3完成
 const getLoanList = ({ params = {}, sucf = "", errf = "" } = {}) => {
   params.m = PARAMS.getLoanList;
@@ -39,6 +43,7 @@ export {
   login,
   register,
   addLoan,
+  confirmLoan,
   getSXList,
   getLoanList,
   bindCard,

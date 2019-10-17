@@ -37,7 +37,11 @@
 .mt-button {
   width: 100%;
 }
-
+.mini-button{
+  padding:0 8px;
+  height: 24px;
+  line-height: 24px;
+}
 .wrap-bind .mint-field{
   /* border-bottom: 1px solid #ddd */
 }
