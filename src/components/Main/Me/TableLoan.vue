@@ -36,7 +36,7 @@
               type="danger"
               class="mini-button"
               size="small"
-              @click.self.stop="handleConfirm(item.remoney,item.bid)"
+              @click.self.stop="handleConfirm(item.money,item.bid)"
             >待确认</mt-button>
           </div>
           <div class="placeholder" v-else>{{item.status}}</div>
