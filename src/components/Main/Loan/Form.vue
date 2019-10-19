@@ -79,8 +79,11 @@ export default {
   },
   methods: {
     handleSubmie() {
+      if (!this.check()) {
+        return;
+      }
       const params = this.form;
-      params.uid=this.$store.state.userInfo.uid||"";
+      params.uid = this.$store.state.userInfo.uid || "";
       const sucf = () => {
         Toast({
           message: "操作成功",
@@ -90,8 +93,28 @@ export default {
       };
       addLoan({ params, sucf });
     },
-    handleBind(){
-      this.$router.push({path:"/bind"})
+    handleBind() {
+      this.$router.push({ path: "/bind" });
+    },
+    check() {
+      const regIdCard = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+      const regPhone = /^[1][3,4,5,7,8][0-9]{9}$/;
+      const { idcard, phone } = this.form;
+      if (!regIdCard.test(idcard)) {
+        Toast({
+          message: "身份证格式错误",
+          duration: 1000
+        });
+        return false;
+      }
+      if (!regPhone.test(phone)) {
+        Toast({
+          message: "手机格式错误",
+          duration: 1000
+        });
+        return false;
+      }
+      return true;
     }
   }
 };

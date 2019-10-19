@@ -26,7 +26,7 @@ import { getLoanList } from "@/api";
 export default {
   data() {
     return {
-      selected: "还款",
+      selected: "申请",
       data1,
       data2,
       data3
