@@ -23,10 +23,7 @@
         <div class="placeholder">{{ item.qs }}</div>
       </div>
       <div class="weui-flex__item">
-        <div class="placeholder">{{ item.yhbj }}</div>
-      </div>
-      <div class="weui-flex__item">
-        <div class="placeholder">{{ item.yhlx }}</div>
+        <div class="placeholder">{{ item.bjjlx }}</div>
       </div>
       <div class="weui-flex__item">
         <div class="placeholder">{{ item.date }}</div>

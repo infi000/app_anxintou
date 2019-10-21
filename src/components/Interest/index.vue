@@ -25,8 +25,8 @@ import { billedData } from "./data";
 import TableBill from "./TableBill";
 import { mapState } from "vuex";
 import { getSXList } from "@/api";
-const billTemplate = ["期数", "应还本金(元)", "应还利息(元)", "还款日期"];
-const billedTemplate = ["期数", "已还本金(元)", "已还利息(元)", "还款日期"];
+const billTemplate = ["期数", "应还金额（元）", "还款日期"];
+const billedTemplate = ["期数", "已还金额(元)", "还款日期"];
 export default {
   data() {
     return {
