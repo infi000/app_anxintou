@@ -20,16 +20,16 @@
 </template>
 
 <script>
-import { data1, data2, data3 } from "./data";
+// import { data1, data2, data3 } from "./data";
 import TableLoan from "./TableLoan";
 import { getLoanList } from "@/api";
 export default {
   data() {
     return {
       selected: "申请",
-      data1,
-      data2,
-      data3
+      data1:[],
+      data2:[],
+      data3:[]
     };
   },
   components: {

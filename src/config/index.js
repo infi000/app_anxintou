@@ -1,5 +1,5 @@
-// let host = 'https://39.105.15.139';
-let host = 'https://39.105.11.197';
+let host = 'https://39.105.15.139';
+// let host = 'https://39.105.11.197';
 const env = process.env;
 if (env.NODE_ENV == 'development') {
   // 开发环境
