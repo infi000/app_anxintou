@@ -32,11 +32,12 @@
       <div class="weui-flex__item">
         <template>
           <div class="placeholder" v-if="item.ustatus==0&&item.bstatus==5">
+          <!-- <div class="placeholder" > -->
             <mt-button
               type="danger"
               class="mini-button"
               size="small"
-              @click.self.stop="handleConfirm(item.money,item.bid)"
+              @click.self.stop="handleConfirm(item.money,item.bid,item.mqyhe)"
             >待确认</mt-button>
           </div>
           <div class="placeholder" v-else>{{item.status}}</div>
@@ -60,11 +61,11 @@ export default {
       this.$store.commit("interest/updateBid", bid);
       this.$router.push({ path: "interest" });
     },
-    handleConfirm(money,bid) {
-      MessageBox.confirm(`终审通过金额为${money}元`).then(action => {});
+    handleConfirm(money,bid,mqyhe) {
+      // MessageBox.confirm(`终审通过金额为${money}元`).then(action => {});
       MessageBox({
         title: "提示",
-        message: `终审通过金额为${money}元`,
+        message: `终审通过金额为${money}元<br>月还金额为${mqyhe}`,
         showConfirmButton: true,
         showCancelButton: true,
         confirmButtonText: "确认",

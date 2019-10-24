@@ -25,6 +25,9 @@
       <div class="weui-flex__item">
         <div class="placeholder">{{ item.bjjlx }}</div>
       </div>
+      <!-- <div class="weui-flex__item">
+        <div class="placeholder">{{ item.yhlx }}</div>
+      </div> -->
       <div class="weui-flex__item">
         <div class="placeholder">{{ item.date }}</div>
       </div>
