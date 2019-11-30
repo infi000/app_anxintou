@@ -72,13 +72,18 @@ const hasMarriedArr = [
 const state = {
   topEducationArr,
   monthlyIncomeArr,
-  hasMarriedArr
+  hasMarriedArr,
+  loanPdfSource: {src:"",bid:""}
 };
-const mutations={}
+const mutations = {
+  updateloanPdfSource(state, payload) {
+    state.loanPdfSource = payload;
+  }
+};
 
 const store = {
   state,
   mutations,
-  namespaced:true
+  namespaced: true
 };
 export default store;

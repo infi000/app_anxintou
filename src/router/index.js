@@ -3,10 +3,9 @@ import Router from "vue-router";
 import Login from "@/components/Login";
 import Register from "@/components/Register";
 import Main from "@/components/Main";
-import Loan from "@/components/Main/Loan";
 import Interest from "@/components/Interest";
-import Me from "@/components/Main/Me";
 import Bind from "@/components/Bind";
+import CheckLoan from "@/components/CheckLoan";
 
 Vue.use(Router);
 
@@ -37,6 +36,11 @@ export default new Router({
       name: "main",
       component: Main,
       children: []
+    },
+    {
+      path: "/checkLoan",
+      name: "CheckLoan",
+      component: CheckLoan,
     }
   ]
 });

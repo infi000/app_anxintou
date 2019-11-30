@@ -14,10 +14,12 @@ const params = {
   addLoan: 103050,
   getLoanList: 101030,
   getSXList: 101013,
-  confirmLoan:103063,//用户确认
+  getLoan: 101022, //获取合同资料
+  confirmLoan: 103063, //用户确认
   bindCard: 103080,
   bindCardQr: 103081,
   bindCardRepeat: 103082,
+  loanSignature: 101043,//合同签章
 };
 
 export { params, host ,api};

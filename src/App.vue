@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="wrap">
     <router-view/>
+    <router-view name="checkLoan"/>
     <!-- <router-view name="interest"/> -->
   </div>
 </template>

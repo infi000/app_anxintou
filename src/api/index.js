@@ -23,6 +23,11 @@ const getLoanList = ({ params = {}, sucf = "", errf = "" } = {}) => {
   params.m = PARAMS.getLoanList;
   invoke(params, sucf, errf);
 };
+//获取合同接口 id: 借款ID
+const getLoan = ({ params = {}, sucf = "", errf = "" } = {}) => {
+  params.m = PARAMS.getLoan;
+  invoke(params, sucf, errf);
+};
 //查询用户生息表
 const getSXList = ({ params = {}, sucf = "", errf = "" } = {}) => {
   params.m = PARAMS.getSXList;
@@ -38,6 +43,11 @@ const bindCardQr = ({ params = {}, sucf = "", errf = "" } = {}) => {
   params.m = PARAMS.bindCardQr;
   invoke_yjw(params, sucf, errf);
 };
+//合同签章接口  bid: 借款ID
+const loanSignature = ({ params = {}, sucf = "", errf = "" } = {}) => {
+  params.m = PARAMS.loanSignature;
+  invoke_yjw(params, sucf, errf);
+};
 
 export {
   login,
@@ -46,6 +56,8 @@ export {
   confirmLoan,
   getSXList,
   getLoanList,
+  getLoan,
   bindCard,
-  bindCardQr
+  bindCardQr,
+  loanSignature
 };
