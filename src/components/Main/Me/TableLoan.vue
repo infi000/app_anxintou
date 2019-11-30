@@ -93,7 +93,7 @@ export default {
       });
     },
     handleCheckLoan(bid) {
-      this.$store.commit("loan/updateloanPdfSource", {src:"/static/test.pdf",bid:""});
+      this.$store.commit("loan/updateloanPdfSource", {src:"./static/test.pdf",bid:""});
       this.$router.push({ path: "/CheckLoan" });
       this.getLoan({ bid });
     },
