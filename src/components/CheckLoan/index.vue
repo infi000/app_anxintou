@@ -34,7 +34,6 @@ import { Toast } from "mint-ui";
 export default {
   data() {
     return {
-      bid: "",
       currentPage: 0,
       pageCount: 0,
       loadingTask: "",

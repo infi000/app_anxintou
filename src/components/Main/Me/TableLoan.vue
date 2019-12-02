@@ -93,9 +93,9 @@ export default {
       });
     },
     handleCheckLoan(bid) {
-      this.$store.commit("loan/updateloanPdfSource", {src:"./static/test.pdf",bid:""});
+      this.$store.commit("loan/updateloanPdfSource", {src:"./static/muban.pdf",bid});
       this.$router.push({ path: "/CheckLoan" });
-      this.getLoan({ bid });
+      // this.getLoan({ bid });
     },
     confirmLoan(params = { bid: "", type: "" }) {
       const sucf = () => {

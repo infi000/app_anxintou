@@ -46,7 +46,7 @@ const bindCardQr = ({ params = {}, sucf = "", errf = "" } = {}) => {
 //合同签章接口  bid: 借款ID
 const loanSignature = ({ params = {}, sucf = "", errf = "" } = {}) => {
   params.m = PARAMS.loanSignature;
-  invoke_yjw(params, sucf, errf);
+  invoke(params, sucf, errf);
 };
 
 export {
