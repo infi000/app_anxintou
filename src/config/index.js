@@ -1,9 +1,10 @@
-let host = 'https://39.105.15.139';
+// let host = 'https://39.105.15.139';
 // let host = 'https://39.105.11.197';
+let host = "";
 const env = process.env;
-if (env.NODE_ENV == 'development') {
+if (env.NODE_ENV == "development") {
   // 开发环境
-  host = 'api';
+  host = "api";
 }
 // 正式
 const api = host + "/loanapi/i.php?";
@@ -19,7 +20,7 @@ const params = {
   bindCard: 103080,
   bindCardQr: 103081,
   bindCardRepeat: 103082,
-  loanSignature: 101043,//合同签章
+  loanSignature: 101043 //合同签章
 };
 
-export { params, host ,api};
+export { params, host, api };
